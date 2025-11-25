@@ -387,7 +387,8 @@
         <div class="col-lg-7">
           <h2 class="section-title mb-2">Services</h2>
           <p class="section-subtitle">
-            From early prototypes to small production batches, ProtoMech Engineering combines CAD design and 3D printing to deliver
+            From early prototypes to small production batches, ProtoMech Engineering combines CAD design and 3D printing
+            to deliver
             practical, install-ready parts.
           </p>
         </div>
@@ -596,11 +597,6 @@
       <div class="row justify-content-between align-items-end mb-4">
         <div class="col-lg-7">
           <h2 class="section-title mb-2">Typical parts and applications</h2>
-          <p class="section-subtitle">
-            Replace these examples with your own photos over time. The aim is to show the kind of work ProtoMech does,
-            not
-            just pretty prints.
-          </p>
         </div>
       </div>
 
@@ -667,7 +663,7 @@
       <div class="row justify-content-center">
         <div class="col-lg-8">
           <div class="contact-wrapper">
-            <form action="https://formsubmit.co/info.protomech@gmail.com" method="POST">
+            <form action="https://formsubmit.co/info.protomech@gmail.com" method="POST" enctype="multipart/form-data">
               <!-- FormSubmit options -->
               <input type="hidden" name="_captcha" value="false">
               <input type="hidden" name="_subject" value="New enquiry from ProtoMech Engineering website">
@@ -704,9 +700,11 @@
                     required></textarea>
                 </div>
                 <div class="col-12">
-                  <label for="files" class="form-label">Links to files or photos (optional)</label>
-                  <input type="text" id="files" name="files" class="form-control"
-                    placeholder="Paste links to photos or CAD (Google Drive, Dropbox, etc.)" />
+                  <label for="files" class="form-label">Attach files (optional)</label>
+                  <input type="file" id="files" name="attachments" class="form-control"
+                    accept=".step,.stp,.iges,.igs,.stl,.obj,.pdf,.png,.jpg,.jpeg,.zip" multiple />
+                  <small class="text-muted d-block mt-1">CAD, images, or ZIPs. You can also paste links in the details
+                    box.</small>
                 </div>
                 <div class="col-12 d-flex justify-content-between flex-wrap gap-2 align-items-center">
                   <small class="text-muted">
