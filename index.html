@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ProtoMech – 3D Printing & Low Volume Production</title>
+  <title>ProtoMech Engineering – 3D Printing & Low Volume Production</title>
 
   <!-- Bootstrap 5 CSS -->
   <link
@@ -30,6 +30,7 @@
     ================================== */
 
     :root {
+      --nav-height: 76px;
       /* Main accent colour */
       --primary: #0f766e;
       --primary-dark: #115e59;
@@ -45,6 +46,10 @@
 
       --badge-bg: #ecfeff;
       --badge-border: #a5f3fc;
+    }
+
+    html {
+      scroll-padding-top: var(--nav-height);
     }
 
     body {
@@ -63,6 +68,10 @@
     .navbar {
       background-color: #ffffff;
       border-bottom: 1px solid var(--border-soft);
+    }
+
+    .navbar-light .navbar-toggler {
+      border-color: transparent;
     }
 
     .navbar-brand span {
@@ -150,8 +159,9 @@
 
     /* SECTIONS */
     section {
-      padding-top: 3.5rem;
-      padding-bottom: 3.5rem;
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+      scroll-margin-top: var(--nav-height);
     }
 
     .section-title {
@@ -170,7 +180,6 @@
       border-radius: 0.9rem;
       padding: 1.5rem;
       border: 1px solid var(--border-soft);
-      height: 100%;
     }
 
     .pm-card:hover {
@@ -276,10 +285,10 @@
 <body>
 
   <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
     <div class="container">
       <a class="navbar-brand fw-bold" href="#">
-        Proto<span>Mech</span>
+        Proto<span>Mech</span> Engineering
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -309,15 +318,12 @@
     <div class="container">
       <div class="row g-5 align-items-center">
         <div class="col-lg-7">
-          <div class="hero-badge mb-3">
-            <span>3D printed prototypes & low-volume production runs</span>
-          </div>
           <h1 class="hero-title mb-3">
             Reliable <span class="hero-highlight">3D printed parts</span> from one-off prototypes up to short runs.
           </h1>
           <p class="hero-subtitle mb-4">
-            ProtoMech helps you bridge the gap between prototype and production with functional 3D printed parts,
-            without tooling costs or long lead times.
+            ProtoMech Engineering (Pty) Ltd bridges prototype and production with functional FDM parts, avoiding tooling
+            costs and long lead times.
           </p>
           <div class="d-flex flex-wrap gap-2 mb-3">
             <a href="#contact" class="btn btn-primary">
@@ -328,7 +334,8 @@
             </a>
           </div>
           <p class="text-muted mb-1" style="font-size: 0.9rem;">
-            Perfect for brackets, housings, clips, fixtures and other low to medium volume plastic parts.
+            Experienced team delivering FDM parts in consumer and engineering materials—PETG, ASA, PA6, PA12, carbon
+            fibre-filled, and more—for brackets, housings, clips, fixtures, and other low to medium volume parts.
           </p>
         </div>
 
@@ -383,19 +390,19 @@
 
       <div class="row g-4">
         <div class="col-md-6 col-lg-3">
-          <div class="pm-card">
-            <div class="pm-card-icon">Print</div>
-            <h3 class="h6 mb-2">Custom 3D printing</h3>
-            <p class="text-muted mb-3">
-              Upload your existing CAD files (STEP, STL, etc.) and we’ll prepare and print parts suitable for real-world use.
-            </p>
-            <ul class="text-muted small mb-0">
-              <li>PETG, ASA and more</li>
+            <div class="pm-card">
+              <div class="pm-card-icon">Print</div>
+              <h3 class="h6 mb-2">Custom 3D printing</h3>
+              <p class="text-muted mb-3">
+                Upload your existing CAD files (STEP, STL, etc.) and we’ll prepare and print parts suitable for real-world use.
+              </p>
+              <ul class="text-muted small mb-0">
+              <li>FDM production: PA6, PA12, CF-filled, PETG, ASA</li>
               <li>Functional prototypes & jigs</li>
               <li>Short production runs</li>
-            </ul>
+              </ul>
+            </div>
           </div>
-        </div>
 
         <div class="col-md-6 col-lg-3">
           <div class="pm-card">
@@ -438,6 +445,44 @@
               <li>Repeatable quality</li>
               <li>Flexible order quantities</li>
               <li>Easy design updates between batches</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MATERIALS -->
+  <section id="materials">
+    <div class="container">
+      <div class="row justify-content-between align-items-end mb-4">
+        <div class="col-lg-7">
+          <h2 class="section-title mb-2">Materials & capabilities</h2>
+          <p class="section-subtitle">
+            Qualified engineers running FDM across consumer and engineering-grade plastics. If you need something specific, ask.
+          </p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="pm-card h-100">
+            <h3 class="h6 mb-2">Consumer-grade staples</h3>
+            <ul class="text-muted small mb-0">
+              <li>PETG and ASA for outdoor and general-use parts</li>
+              <li>PLA for quick mock-ups and fit checks</li>
+              <li>Color options available on request</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="pm-card h-100">
+            <h3 class="h6 mb-2">Engineering-grade options</h3>
+            <ul class="text-muted small mb-0">
+              <li>PA6 and PA12 for strength and durability</li>
+              <li>Carbon fibre-filled nylons for stiffness and heat resistance</li>
+              <li>Guidance on design-for-print and material selection</li>
             </ul>
           </div>
         </div>
@@ -511,7 +556,7 @@
             <h3 class="h6 mb-1">No tooling cost</h3>
             <p class="text-muted small mb-0">
               You’re not paying for moulds or fixtures before you have a proven design. This is ideal when you’re still
-              refining geometry or volumes are modest.
+              refining geometry or volumes are modest, especially for engineered plastics where iterations matter.
             </p>
           </div>
 
@@ -613,7 +658,7 @@
             <form action="https://formsubmit.co/info.protomech@gmail.com" method="POST">
               <!-- FormSubmit options -->
               <input type="hidden" name="_captcha" value="false">
-              <input type="hidden" name="_subject" value="New enquiry from ProtoMech website">
+              <input type="hidden" name="_subject" value="New enquiry from ProtoMech Engineering website">
               <input type="hidden" name="_next" value="https://protomech.co.za/#contact">
 
               <div class="row g-3">
@@ -700,7 +745,7 @@
   <footer class="py-3">
     <div class="container">
       <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
-        <small>© <span id="year"></span> ProtoMech. All rights reserved.</small>
+        <small>© <span id="year"></span> ProtoMech Engineering (Pty) Ltd. All rights reserved.</small>
         <small>
           Contact: <a href="mailto:info.protomech@gmail.com">info.protomech@gmail.com</a>
         </small>
