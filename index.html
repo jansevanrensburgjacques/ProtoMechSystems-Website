@@ -102,6 +102,25 @@
     .hero {
       padding-top: 5.5rem;
       padding-bottom: 4rem;
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(120deg, rgba(15, 118, 110, 0.1), rgba(17, 94, 89, 0.2)),
+        url("images/background-batch-parts.jpg") center / cover no-repeat;
+      opacity: 0.22;
+      z-index: 0;
+    }
+
+    .hero .container {
+      position: relative;
+      z-index: 1;
     }
 
     .hero-badge {
@@ -677,7 +696,7 @@
       <div class="row justify-content-center">
         <div class="col-lg-8">
           <div class="contact-wrapper">
-            <form action="https://formsubmit.co/info.protomech@gmail.com" method="POST" enctype="multipart/form-data">
+            <form action="https://formsubmit.co/info.protomech@gmail.com" method="POST">
               <!-- FormSubmit options -->
               <input type="hidden" name="_captcha" value="false">
               <input type="hidden" name="_subject" value="New enquiry from ProtoMech Engineering website">
@@ -712,13 +731,6 @@
                   <textarea id="project-details" name="project_details" rows="4" class="form-control"
                     placeholder="Describe what the part is for, approximate size, quantity you’re considering, and any special requirements (strength, temperature, outdoor use, etc.)."
                     required></textarea>
-                </div>
-                <div class="col-12">
-                  <label for="files" class="form-label">Attach files (optional)</label>
-                  <input type="file" id="files" name="attachment" class="form-control"
-                    accept=".step,.stp,.iges,.igs,.stl,.obj,.pdf,.png,.jpg,.jpeg,.zip" />
-                  <small class="text-muted d-block mt-1">Up to 5MB; CAD, images, or ZIPs. Larger files? Paste a link in
-                    the details.</small>
                 </div>
                 <div class="col-12 d-flex justify-content-between flex-wrap gap-2 align-items-center">
                   <small class="text-muted">
